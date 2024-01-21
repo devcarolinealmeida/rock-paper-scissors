@@ -29,6 +29,7 @@ const playGame = (weaponUser) => {
     userDisplay.innerText = `User: ${weaponUser}`;
     computerDisplay.innerText = `Computer: ${randomWeapon}`;
     resultDisplay.innerText = result;
+
 }
 
 
