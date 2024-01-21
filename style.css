@@ -70,7 +70,7 @@ main {
     min-height: 70vh;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .title {
@@ -82,15 +82,54 @@ main {
     background-color: #43A047;
     border-radius: 100%;
     border: none;
-    width: 6rem;
-    height: 6rem;
+    width: clamp(5rem, 10vw, 6rem);
+    height: clamp(5rem, 10vw, 6rem);
+    margin-right: 1rem;
+    transition: background-color 100ms ease-in;
 }
+   .options button:hover {
+        background-color: #517a53;
+        cursor: pointer;
+        box-shadow: rgba(88, 88, 88, 0.8) 0px 2px 8px 0px
+    }
 
 .fa-regular {
     color: white;
-    font-size: 4rem;
+    font-size: clamp(3rem, 6vw, 4rem);;
 }
 
-.hide {
-    display: none;
+.userComputerContainer {
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    transition: all 700ms ease-in-out;
 }
+
+.resultDisplay {
+    font-weight: 600;
+    font-size: clamp(1.5rem, 8vw, 2.5rem);
+    min-height: 2.5rem;
+    color: #eeee1e;
+}
+
+
+/* Utilities */
+/* .hide {
+    display: none;
+} */
+.inactive {
+    opacity: 0;
+}
+
+.colorGreen {
+    color: #43A047;
+}
+
+.colorRed {
+   color: #d0483d;
+}
+
+
+
+

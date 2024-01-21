@@ -7,6 +7,7 @@ const computerScoreDisplay = document.getElementById('computerScoreDisplay');
 let userScore = 0;
 let computerScore = 0;
 const newGame = document.getElementById('newGame');
+const userComputerContainer = document.getElementById('userComputerContainer');
 
 console.log(weaponsComputer);
 
@@ -32,34 +33,35 @@ const playGame = (weaponUser) => {
         }
     }
     console.log(result);
-    userDisplay.innerText = `User: ${weaponUser}`;
+    userDisplay.innerText = `You: ${weaponUser}`;
     computerDisplay.innerText = `Computer: ${randomWeapon}`;
     resultDisplay.innerText = result;
  
+    resultDisplay.classList.remove('colorGreen', 'colorRed');
 
     switch(result) {
         case 'You win': 
             userScore++;
             console.log(userScore);
             userScoreDisplay.textContent = userScore;
+            resultDisplay.classList.add('colorGreen');
         break;
         case 'You lose':
             computerScore++;
             console.log(computerScore);
             computerScoreDisplay.textContent = computerScore;
+            resultDisplay.classList.add('colorRed');
         break;
     }
-
-   
-    
-
-
 }
-
 
 const raffleWeapon = () => {
     let i = Math.floor(Math.random() * weaponsComputer.length);
     randomWeapon = weaponsComputer[i];
     /* console.log(randomWeapon); */
+}
+
+const removeClass = () => {
+    userComputerContainer.classList.remove('inactive');
 }
 

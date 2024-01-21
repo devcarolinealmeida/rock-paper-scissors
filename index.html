@@ -14,28 +14,36 @@
     <main>
       <div class="container">
             <h1 class="title">Rock Paper Scissors Game</h1>
-            <!--Options User A -->
-            <div class="options">
-                <button onclick="playGame('rock')"><i class="fa-regular fa-hand-back-fist"></i></button>
-                <button onclick="playGame('paper')"><i class="fa-regular fa-hand"></i></button>
-                <button onclick="playGame('scissors')"><i class="fa-regular fa-hand-scissors"></i></button>
+
+            <div id="intro-container">
+                How do you wanna play?
+                <button id="userComputer" onclick="removeClass()">User vs Computer</button>
+                <button id="computerComputer">Computer vs Computer</button>
             </div>
-            <!--Info results -->
-            <div class="results">
-                <div id="userDisplay">User:</div>
-                <div id="computerDisplay">Computer:</div>
-                <div id="resultDisplay">Result:</div>
-            </div>
-            <div class="scores">
-                <div>User Score:
-                    <span id="userScoreDisplay">0</span>
+            <div id="userComputerContainer" class="userComputerContainer inactive">
+                <!--Options User A -->
+                <div class="options">
+                    <button onclick="playGame('rock')"><i class="fa-regular fa-hand-back-fist"></i></button>
+                    <button onclick="playGame('paper')"><i class="fa-regular fa-hand"></i></button>
+                    <button onclick="playGame('scissors')"><i class="fa-regular fa-hand-scissors"></i></button>
                 </div>
-                <div>Computer Score:
-                    <span id="computerScoreDisplay">0</span>
+                <!--Info results -->
+                <div class="results">
+                    <div id="userDisplay">You:</div>
+                    <div id="computerDisplay">Computer:</div>
+                    <div id="resultDisplay" class="resultDisplay"></div>
                 </div>
-            </div>
-            <div id="newGame" class="hide">
-                <button onclick="location.reload()">Start a new game</button>
+                <div class="scores title">
+                    <div>Your Score:
+                        <span id="userScoreDisplay">0</span>
+                    </div>
+                    <div>Computer Score:
+                        <span id="computerScoreDisplay">0</span>
+                    </div>
+                </div>
+                <div id="newGame" class="hide">
+                    <button onclick="location.reload()">Start a new game</button>
+                </div>
             </div>
       </div>
     </main>
