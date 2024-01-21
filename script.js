@@ -1,4 +1,7 @@
 const weaponsComputer = ['rock','paper','scissors'];
+const userDisplay = document.getElementById('userDisplay');
+const computerDisplay = document.getElementById('computerDisplay');
+const resultDisplay = document.getElementById('resultDisplay');
 
 console.log(weaponsComputer);
 
@@ -23,6 +26,9 @@ const playGame = (weaponUser) => {
         }
     }
     console.log(result);
+    userDisplay.innerText = `User: ${weaponUser}`;
+    computerDisplay.innerText = `Computer: ${randomWeapon}`;
+    resultDisplay.innerText = result;
 }
 
 
