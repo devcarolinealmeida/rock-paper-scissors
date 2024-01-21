@@ -27,3 +27,4 @@ Acceptance Criteria:
 4. When the user clicks on the button weapon, the computer choose a random weapon;
 5. Create a function to compairs who wins;
 6. Show in the screen the results;
+7. Make a score to user and to the computer

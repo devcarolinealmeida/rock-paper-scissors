@@ -90,3 +90,7 @@ main {
     color: white;
     font-size: 4rem;
 }
+
+.hide {
+    display: none;
+}

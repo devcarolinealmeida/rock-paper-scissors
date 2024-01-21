@@ -20,10 +20,22 @@
                 <button onclick="playGame('paper')"><i class="fa-regular fa-hand"></i></button>
                 <button onclick="playGame('scissors')"><i class="fa-regular fa-hand-scissors"></i></button>
             </div>
+            <!--Info results -->
             <div class="results">
                 <div id="userDisplay">User:</div>
                 <div id="computerDisplay">Computer:</div>
-                <div id="resultDisplay"></div>
+                <div id="resultDisplay">Result:</div>
+            </div>
+            <div class="scores">
+                <div>User Score:
+                    <span id="userScoreDisplay">0</span>
+                </div>
+                <div>Computer Score:
+                    <span id="computerScoreDisplay">0</span>
+                </div>
+            </div>
+            <div id="newGame" class="hide">
+                <button onclick="location.reload()">Start a new game</button>
             </div>
       </div>
     </main>
