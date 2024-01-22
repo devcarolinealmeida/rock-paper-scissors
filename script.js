@@ -1,3 +1,4 @@
+/* User Vs Computer */
 const weaponsComputer = ['rock','paper','scissors'];
 const userDisplay = document.getElementById('userDisplay');
 const computerDisplay = document.getElementById('computerDisplay');
@@ -7,7 +8,7 @@ const computerScoreDisplay = document.getElementById('computerScoreDisplay');
 let userScore = 0;
 let computerScore = 0;
 const newGame = document.getElementById('newGame');
-const userComputerContainer = document.getElementById('userComputerContainer');
+const userVsComputerContainer = document.getElementById('userVsComputerContainer');
 
 console.log(weaponsComputer);
 
@@ -18,7 +19,7 @@ const playGame = (weaponUser) => {
     newGame.classList.remove('hide');
 
     if(weaponUser === randomWeapon) {
-        result = 'Its a tie';
+        result = 'Its a draw';
     } 
     else {
         switch(weaponUser) {
@@ -61,7 +62,59 @@ const raffleWeapon = () => {
     /* console.log(randomWeapon); */
 }
 
-const removeClass = () => {
-    userComputerContainer.classList.remove('inactive');
+const removeClass = (e) => {
+    e.classList.remove('inactive');
 }
 
+
+
+/* Computer Vs Computer */
+const computerAdisplay = document.getElementById('computerAdisplay');
+const computerBdisplay = document.getElementById('computerBdisplay');
+const resultDisplay2 = document.getElementById('resultDisplay2');
+const computerAScoreDisplay = document.getElementById('computerAScoreDisplay');
+const computerBScoreDisplay = document.getElementById('computerBScoreDisplay');
+let computerAScore = 0;
+let computerBScore = 0;
+
+const playGame2 = () => {
+    raffleWeapon();
+    let randomWeaponA = randomWeapon;
+    computerAdisplay.innerText = `Computer A: ${randomWeaponA}`;
+    raffleWeapon();
+    let randomWeaponB = randomWeapon;
+    computerBdisplay.innerText = `Computer B: ${randomWeaponB}`;
+    console.log(randomWeaponA, randomWeaponB);
+
+    result2 = '';
+
+    if(randomWeaponA === randomWeaponB) {
+        result2 = 'Its a draw';
+    } 
+    else {
+        switch(randomWeaponA) {
+            case 'rock':
+                result2 = (randomWeaponB === 'scissors' ? 'Computer A Wins' : 'Computer B Wins');
+                break;
+            case 'paper':
+                result2 = (randomWeaponB === 'rock' ? 'Computer A Wins' : 'Computer B Wins');
+                break;
+            case 'scissors':
+                result2 = (randomWeaponB === 'paper' ? 'Computer A Wins' : 'Computer B Wins');
+                break;
+        }
+    }
+    console.log(result2);
+    resultDisplay2.innerText = result2;
+
+    switch (result2) {
+        case 'Computer A Wins':
+            computerAScore++;
+            computerAScoreDisplay.textContent = computerAScore;
+            break;
+        case 'Computer B Wins':
+            computerBScore++;
+            computerBScoreDisplay.textContent = computerBScore;
+            break;
+    }
+}

@@ -98,7 +98,8 @@ main {
     font-size: clamp(3rem, 6vw, 4rem);;
 }
 
-.userComputerContainer {
+.userVsComputerContainer,
+.computerVsComputerContainer {
     opacity: 1;
     display: flex;
     flex-direction: column;
@@ -106,7 +107,8 @@ main {
     transition: all 700ms ease-in-out;
 }
 
-.resultDisplay {
+.resultDisplay,
+.resultDisplay2 {
     font-weight: 600;
     font-size: clamp(1.5rem, 8vw, 2.5rem);
     min-height: 2.5rem;
