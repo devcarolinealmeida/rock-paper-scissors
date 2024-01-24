@@ -1,18 +1,17 @@
-/* User Vs Computer */
+/*--- User Vs Computer ---*/
 const weaponsComputer = ['rock','paper','scissors'];
-const userDisplay = document.getElementById('userDisplay');
-const computerDisplay = document.getElementById('computerDisplay');
-const resultDisplay = document.getElementById('resultDisplay');
-const userScoreDisplay = document.getElementById('userScoreDisplay');
-const computerScoreDisplay = document.getElementById('computerScoreDisplay');
 let userScore = 0;
 let computerScore = 0;
-const newGame = document.getElementById('newGame');
-const userVsComputerContainer = document.getElementById('userVsComputerContainer');
-
 console.log(weaponsComputer);
 
 const playGame = (weaponUser) => {
+    const userDisplay = document.getElementById('userDisplay');
+    const computerDisplay = document.getElementById('computerDisplay');
+    const resultDisplay = document.getElementById('resultDisplay');
+    const userScoreDisplay = document.getElementById('userScoreDisplay');
+    const computerScoreDisplay = document.getElementById('computerScoreDisplay');
+    const newGame = document.getElementById('newGame');
+
     raffleWeapon();
     console.log(weaponUser, randomWeapon);
     result = '';
@@ -62,22 +61,17 @@ const raffleWeapon = () => {
     /* console.log(randomWeapon); */
 }
 
-const removeClass = (e) => {
-    e.classList.remove('inactive');
-}
-
-
-
-/* Computer Vs Computer */
-const computerAdisplay = document.getElementById('computerAdisplay');
-const computerBdisplay = document.getElementById('computerBdisplay');
-const resultDisplay2 = document.getElementById('resultDisplay2');
-const computerAScoreDisplay = document.getElementById('computerAScoreDisplay');
-const computerBScoreDisplay = document.getElementById('computerBScoreDisplay');
+/*--- Computer Vs Computer ---*/
 let computerAScore = 0;
 let computerBScore = 0;
 
 const playGame2 = () => {
+    const computerAdisplay = document.getElementById('computerAdisplay');
+    const computerBdisplay = document.getElementById('computerBdisplay');
+    const resultDisplay2 = document.getElementById('resultDisplay2');
+    const computerAScoreDisplay = document.getElementById('computerAScoreDisplay');
+    const computerBScoreDisplay = document.getElementById('computerBScoreDisplay');
+    
     raffleWeapon();
     let randomWeaponA = randomWeapon;
     computerAdisplay.innerText = `Computer A: ${randomWeaponA}`;
@@ -117,4 +111,20 @@ const playGame2 = () => {
             computerBScoreDisplay.textContent = computerBScore;
             break;
     }
+}
+
+// refresh contend
+const openPage = (indice, target) => {
+    const url = './content' + indice + '.html';
+    console.log(indice, target, url);
+
+    const xml = new XMLHttpRequest();
+    xml.onreadystatechange = function() {
+        if(xml.readyState == 4 && xml.status == 200) {
+            document.getElementById(target).innerHTML = xml.responseText;
+        }
+    }
+
+    xml.open('GET', url);
+    xml.send();
 }

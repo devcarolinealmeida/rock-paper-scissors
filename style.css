@@ -98,14 +98,14 @@ main {
     font-size: clamp(3rem, 6vw, 4rem);;
 }
 
-.userVsComputerContainer,
-.computerVsComputerContainer {
+.container-refresh {
     opacity: 1;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    transition: all 700ms ease-in-out;
 }
+
+
 
 .resultDisplay,
 .resultDisplay2 {
@@ -117,12 +117,12 @@ main {
 
 
 /* Utilities */
-/* .hide {
+.hide {
     display: none;
-} */
-.inactive {
-    opacity: 0;
 }
+/* .inactive {
+    opacity: 0;
+} */
 
 .colorGreen {
     color: #43A047;

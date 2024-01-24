@@ -1,0 +1,26 @@
+<div id="userVsComputerContainer" class="userVsComputerContainer container-refresh">
+    <!--Options User A -->
+    <div class="options">
+        <button onclick="playGame('rock')"><i class="fa-regular fa-hand-back-fist"></i></button>
+        <button onclick="playGame('paper')"><i class="fa-regular fa-hand"></i></button>
+        <button onclick="playGame('scissors')"><i class="fa-regular fa-hand-scissors"></i></button>
+    </div>
+    <!--Info results -->
+    <div class="results">
+        <div id="userDisplay">You:</div>
+        <div id="computerDisplay">Computer:</div>
+        <div id="resultDisplay" class="resultDisplay"></div>
+    </div>
+    <div class="scores title">
+        <div>Your Score:
+            <span id="userScoreDisplay">0</span>
+        </div>
+        <div>Computer Score:
+            <span id="computerScoreDisplay">0</span>
+        </div>
+    </div>
+    <div id="newGame" class="hide">
+        <button onclick="location.reload()">Start a new game</button>
+    </div>
+    <script src="script.js"></script>
+</div>
