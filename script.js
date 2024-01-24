@@ -71,7 +71,7 @@ const playGame2 = () => {
     const resultDisplay2 = document.getElementById('resultDisplay2');
     const computerAScoreDisplay = document.getElementById('computerAScoreDisplay');
     const computerBScoreDisplay = document.getElementById('computerBScoreDisplay');
-    
+
     raffleWeapon();
     let randomWeaponA = randomWeapon;
     computerAdisplay.innerText = `Computer A: ${randomWeaponA}`;
@@ -81,6 +81,7 @@ const playGame2 = () => {
     console.log(randomWeaponA, randomWeaponB);
 
     result2 = '';
+    newGame.classList.remove('hide');
 
     if(randomWeaponA === randomWeaponB) {
         result2 = 'Its a draw';

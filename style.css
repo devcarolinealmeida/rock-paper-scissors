@@ -78,6 +78,19 @@ main {
     font-size: clamp(2rem, 8vw, 3rem);
 }
 
+a {
+    background-color: lightslategray;
+    padding: 0.2em 0.5em;
+    border-radius: 0.5em;
+    transition: all 100ms ease-in;
+}
+
+    a:hover {
+        background-color: #606c77;
+        box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+        cursor: pointer;
+    }
+
 .options button {
     background-color: #43A047;
     border-radius: 100%;
@@ -85,13 +98,22 @@ main {
     width: clamp(5rem, 10vw, 6rem);
     height: clamp(5rem, 10vw, 6rem);
     margin-right: 1rem;
-    transition: background-color 100ms ease-in;
+    transition: all 100ms ease-in;
 }
-   .options button:hover {
+   .options button:hover,
+   .play button:hover {
         background-color: #517a53;
         cursor: pointer;
-        box-shadow: rgba(88, 88, 88, 0.8) 0px 2px 8px 0px
+        box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
     }
+
+.play button {
+    background-color: #43A047;
+    border-radius: 2rem;
+    padding: 1em 2rem;
+    color: white;
+    border: none;
+}
 
 .fa-regular {
     color: white;
@@ -105,8 +127,6 @@ main {
     gap: 2rem;
 }
 
-
-
 .resultDisplay,
 .resultDisplay2 {
     font-weight: 600;
@@ -114,7 +134,6 @@ main {
     min-height: 2.5rem;
     color: #eeee1e;
 }
-
 
 /* Utilities */
 .hide {
