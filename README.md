@@ -1,8 +1,9 @@
-# rock-paper-scissors
-Game Rock Paper Scissors
+# [Rock Paper Scissors](https://rock-paper-scissors-swart-gamma.vercel.app/)
+Just for fun | Game | JavaScript Vanilla
 
+<img width="700" alt="Screenshot 2025-02-17 at 09 49 26" src="https://github.com/user-attachments/assets/8ef1f47b-5260-4474-a9fd-ffcc9a72d2ef" />
 
-Acceptance Criteria:
+### Acceptance Criteria:
 -- Umano vs Computer
 -- Computer vs Computer
 -- Nuova partita conclusa quella precedente
